@@ -4,6 +4,12 @@
 - Font sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
+announcement text 1.7rem 700
+primary heading 3.9rem 900
+pd review text 1.5rem
+stars 2rem
+product heading 2.7rem 800
+
 - Font weights
 Default: 400
 Medium: 500
@@ -24,14 +30,20 @@ Large: 1.8
 --- 02 COLORS
 sub headings #cb2831
 stars #ffbf00
+stars 2 #ffae00
 review stars #f8c101
 accents #19af42
 border color #0c9230
 main #5b268c
+border #9a2dba
+copy text #cebedd
 background #fffedb
 text,headings #000
 background #fff
 default text #333
+stock info border #5e5e5e
+stock info background color #fff1c6
+featured in gradient #cacaca
 - Primary:
 - Tints:
 - Shades: 
@@ -51,6 +63,8 @@ Medium: 11px
 
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+btw sections 4.8rem
 
 */
 
@@ -78,38 +92,13 @@ body {
 /*****************************************/
 
 .container {
-  max-width: 100rem;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
-.product-section {
+strong {
+  font-weight: 700;
 }
-
-.grid {
-  display: grid;
-  row-gap: 4.8rem;
-}
-
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.header {
-  background-color: #000;
-}
-
-/* .icon {
-  width: 2.4rem;
-  height: 2.4rem;
-} */
 
 /*****************************************/
 /* HEADER SECTION */
@@ -117,20 +106,23 @@ body {
 
 .header {
   margin-bottom: 4.8rem;
+  background-color: #000;
 }
 
 .banner {
+  max-width: 120rem;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 1.2rem 6.4rem;
+  padding: 1.2rem 4.8rem;
 }
 
-.logo {
-  height: 4.8rem;
+.logo-img {
+  width: 142px;
 }
 
-.made-in {
-  height: 6.4rem;
+.made-in-img {
+  width: 209.5px;
 }
 
 .announcement {
@@ -140,8 +132,8 @@ body {
 }
 
 .announcement-text {
-  line-height: 2.5rem;
-  font-size: 1.4rem;
+  padding: 0.8rem 0;
+  font-size: 1.7rem;
   text-transform: uppercase;
   color: #fff;
   font-weight: 700;
@@ -160,24 +152,30 @@ body {
 /* HERO PRODUCT SECTION */
 /*****************************************/
 
-.product-section {
+.hero-product-container {
+  max-width: 100rem;
+  margin: 0 auto;
 }
 
 .heading-primary {
   text-align: center;
-  font-size: 3.6rem;
+  font-size: 3.9rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -1px;
   color: #000;
+}
+
+.header-product {
   margin-bottom: 4.8rem;
 }
 
 .hero-product {
-  display: flex;
-  gap: 3rem;
-  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  margin-bottom: 4rem;
 }
 
 .product-img-box {
@@ -187,16 +185,16 @@ body {
 }
 
 .product-img {
-  width: 95%;
+  width: 100%;
 }
 
-.product-description-reviews {
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
+.pd-review-text {
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
 }
-
 .stars {
   color: #ffbf00;
+  font-weight: 700;
   font-size: 2rem;
 }
 
@@ -207,62 +205,84 @@ body {
   font-weight: 800;
   letter-spacing: -1px;
   line-height: 1.2;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.4rem;
 }
 
 .product-features-list {
   list-style: none;
   font-size: 2rem;
+  line-height: 1.4;
+  color: #000;
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
   gap: 0.8rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
 }
 
 .pf-list-item {
   display: flex;
   align-items: flex-start;
-  gap: 1.2rem;
+  gap: 0.6rem;
 }
 
 .checkmark-icon {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.2rem;
+  height: 2.2rem;
 }
 
 .btn {
   text-decoration: none;
-  padding: 1.5rem 2rem;
   background-color: #19af42;
   color: #fff;
-  font-size: 2.4rem;
-  font-weight: 700;
   font-family: "Rubik", sans-serif;
   text-align: center;
   display: inline-block;
-  width: 100%;
   border: 2px solid #0c9230;
   border-radius: 1rem;
-  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.btn--hero {
+  width: 100%;
+  font-size: 2.6rem;
+  font-weight: 700;
+  padding: 1.7rem 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.btn-main-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
 }
 
 .btn-sub-text {
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 300;
 }
 
 .btn-icon {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.6rem;
+  height: 2.6rem;
 }
 
 .product-stock-info {
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1.4rem;
   border: 1px dashed #5e5e5e;
   background-color: #fff1c6;
   margin-bottom: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  font-family: "Work Sans", sans-serif;
 }
 
 .payment-img-box {
@@ -272,18 +292,104 @@ body {
   width: 254px;
 }
 
-.featured-testimonial {
-  font-size: 1.8rem;
-  text-align: center;
-  color: #5b268c;
-  margin-bottom: 6.4rem;
+.stars-2 {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: #ffae00;
+  font-weight: 700;
 }
+
+.featured-testimonial-box {
+  text-align: center;
+  margin-bottom: 8rem;
+  font-size: 1.8rem;
+  color: #5b268c;
+  line-height: 1.5;
+}
+
+.ft-author {
+  font-weight: 700;
+}
+
+/*****************************************/
+/* FEATURED IN SECTION */
+/*****************************************/
 
 .section-featured-in {
   display: flex;
   justify-content: center;
-  margin-bottom: 8rem;
+  padding-bottom: 8rem;
+  background-image: linear-gradient(180deg, #fff, #cacaca);
 }
+
+/*****************************************/
+/* WHAT IS SECTION */
+/*****************************************/
+
+.section-what-is {
+  background-color: #cebedd;
+  padding: 8rem 0;
+  border-bottom: 5px solid #9a2dba;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.41),
+      rgba(98, 13, 19, 0.65) 60%,
+      rgba(154, 45, 186, 0.13)
+    ),
+    url(/img/ban1.jpg);
+  background-position: 0 0, 50% 50%;
+  background-size: auto, cover;
+}
+
+.what-is {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6.4rem;
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+
+.wi-video {
+  width: 94%;
+  justify-self: right;
+}
+
+.what-is-heading {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 43px;
+  line-height: 47px;
+  font-style: italic;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+}
+
+.what-is-text {
+  color: #fff;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.what-is-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.btn--buy {
+  width: 50rem;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 700;
+  padding: 19px 15px;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+/*****************************************/
+/* FOOTER SECTION */
+/*****************************************/
 
 .footer {
   background-color: #000;

@@ -7,13 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
@@ -24,8 +28,8 @@
   <body>
     <header class="header">
       <div class="banner">
-        <img class="logo" src="/img/logo.svg" alt="logo" />
-        <img class="made-in" src="img/top3.png" alt="Made in USA" />
+        <img class="logo-img" src="/img/logo.svg" alt="logo" />
+        <img class="made-in-img" src="img/top3.png" alt="Made in USA" />
       </div>
       <div class="announcement">
         <p class="announcement-text">Exclusive Limited Time Online Offer!</p>
@@ -33,10 +37,12 @@
     </header>
 
     <section class="product-section">
-      <div class="container">
-        <h1 class="heading-primary">
-          Remove Sctaches, Swirls and Oxidation Instantly with No Machine!
-        </h1>
+      <div class="hero-product-container">
+        <header class="header-product">
+          <h1 class="heading-primary">
+            Removes Scratches, Swirls and Oxidation Instantly with No Machine!
+          </h1>
+        </header>
 
         <div class="hero-product">
           <div class="product-img-box">
@@ -48,7 +54,7 @@
           </div>
 
           <div class="product-description-box">
-            <p class="product-description-reviews">
+            <p class="pd-review-text">
               <span class="stars">★★★★★</span> 10,127+ Trusted Customer Reviews
             </p>
             <h2 class="product-heading">
@@ -82,15 +88,19 @@
                 >
               </li>
             </ul>
-            <a href="#" class="btn">
-              <span>
-                Get Shine Now
-                <img src="img/icons/right-arrow-button.svg" class="btn-icon" />
-                <br />
-              </span>
-              <span class="btn-sub-text">
-                Try it today with 30-Day Money Back Guarantee</span
-              >
+            <a href="#" class="btn btn--hero">
+              <div class="btn-content">
+                <div class="btn-main-text">
+                  <span>Get Shine Now</span>
+                  <img
+                    src="img/icons/right-arrow-button.svg"
+                    class="btn-icon"
+                  />
+                </div>
+                <div class="btn-sub-text">
+                  Try it today with 30-Day Money Back Guarantee
+                </div>
+              </div>
             </a>
             <p class="product-stock-info">
               🛒 <strong>Stock is Limited:</strong> 3,247+ sold out of 4,000
@@ -106,14 +116,14 @@
           </div>
         </div>
 
-        <div class="featured-testimonial">
-          <p class="stars">★★★★★</p>
+        <div class="featured-testimonial-box">
+          <p class="stars-2">★★★★★</p>
           <p>
             “As directed, put some on an applicator and rub it in. Let dry and
             buff it out. Scratch is gone. Hard to see as it is so clear you just
             see a reflection on the paint."
           </p>
-          <p>- Chris G.</p>
+          <p class="ft-author">- Chris G.</p>
         </div>
       </div>
     </section>
@@ -121,31 +131,38 @@
     <section class="section-featured-in">
       <img src="img/Logo_list_desktop_v04.png" alt="media brand logos" />
     </section>
-    <!--
 
-  <section class="section-what-is">
-    <div class="container grid--2-cols">
-          <img
-          src="img/video-main.mp4"
-          alt="A video about how scratch repair is used"
-          /> 
-          <img src="img/product/s01.jpg" />
+    <section class="section-what-is">
+      <div class="container">
+        <div class="what-is">
+          <video class="wi-video" playsinline autoplay muted loop>
+            <source src="img/video-main.mp4" type="video/mp4" />
+          </video>
+
           <div class="what-is-text-box">
             <h2 class="what-is-heading">
               What Is Revive Scratch Repair All About?
             </h2>
             <p class="what-is-text">
-              Revive Scratch Repair is the most scientifically advanced formula
-              that is designed to get your vehicle swirl-free, scratch-free, and
-              perfected faster than ever. Unlike every other product on the
-              market, our advanced formula features absolutely no fillers and
-              waxes to ensure the most high-end removal process possible.
+              <strong>Revive Scratch Repair</strong> is the most scientifically
+              advanced formula that is designed to get your vehicle swirl-free,
+              scratch-free, and perfected faster than ever. Unlike every other
+              product on the market, our advanced formula features absolutely no
+              fillers and waxes to ensure the most high-end removal process
+              possible.
             </p>
           </div>
         </div>
-        <a href="#" class="btn">Buy Shine Armor Now</a>
-      </section>
-      
+        <div class="what-is-cta">
+          <a href="#" class="btn btn--buy">
+            <span>Buy Shine Armor Now</span>
+            <img src="img/icons/right-arrow-button.svg" class="btn-icon" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--
       <section class="section-features">
         <div class="container grid--3-cols">
           <header>
