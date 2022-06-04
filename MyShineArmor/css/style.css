@@ -619,6 +619,64 @@ strong {
   box-shadow: 1px 1px 12px 0 rgb(0 0 0 / 24%);
   text-align: center;
   font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.price-card:hover {
+  box-shadow: 1px 1px 15px 0 rgb(0 0 0 / 44%);
+}
+
+.pc--best-value::before {
+  content: "";
+  display: block;
+  height: 15px;
+}
+
+.pc--best-value::after {
+  content: "best value";
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  background-color: #19af42;
+  color: #fff;
+  padding: 9px 60px;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pc--best-seller {
+  border: 2px dashed #000;
+  background-color: #fffedb;
+}
+
+.pc--best-seller::before {
+  content: "";
+  display: block;
+  height: 15px;
+}
+
+.pc--best-seller::after {
+  content: "best seller";
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  background-color: #e51a1a;
+  color: #fff;
+  padding: 9px 60px;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .price-heading {
@@ -634,10 +692,10 @@ strong {
   margin-bottom: 1.5rem;
 }
 .price-img {
-  height: 120px;
+  height: 160px;
 }
 .price-img-sm {
-  height: 160px;
+  height: 120px;
 }
 
 .price-box {
@@ -673,11 +731,41 @@ strong {
   font-size: 14px;
   text-transform: uppercase;
   color: #000;
+  margin-bottom: 1.8rem;
+}
+.price-free-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  line-height: 20px;
 }
 .price-guarantee-text {
+  font-size: 10px;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  line-height: 20px;
 }
 .btn--order {
   width: 100%;
+  height: 56px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 56px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.order-btn-icon {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.order-btn-text {
+  display: inline-block;
+  margin-top: 3px;
 }
 
 /*****************************************/
@@ -720,6 +808,7 @@ strong {
 .guarantee-text {
   color: #fff;
   font-size: 19px;
+  margin-bottom: 1.1rem;
 }
 .guarantee-img {
   width: 265px;
